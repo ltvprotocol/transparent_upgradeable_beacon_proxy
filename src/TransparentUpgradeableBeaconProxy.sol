@@ -10,7 +10,7 @@ import {ITransparentUpgradeableBeaconProxy} from "./interfaces/ITransparentUpgra
 /**
  * @title TransparentUpgradeableBeaconProxy
  * @notice This proxy contract delegates all calls to the implementation provided by a Beacon contract.
- * 
+ *
  * @dev Roles and Responsibilities:
  *
  * Beacon Proxy Admin:
@@ -27,10 +27,10 @@ import {ITransparentUpgradeableBeaconProxy} from "./interfaces/ITransparentUpgra
  *
  * Important Considerations:
  *
- * The Beacon owner's implementation executes within the proxy's context. 
+ * The Beacon owner's implementation executes within the proxy's context.
  * As a result, the implementation can access and modify the proxy's storage,
  * including critical slots such as BEACON_SLOT.
- * 
+ *
  * This means that, although the proxy admin controls the Beacon reference,
  * the beacon owner indirectly holds the capability to change the beacon
  * address or other proxy state variables if the implementation code permits it.
