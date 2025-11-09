@@ -4,5 +4,5 @@ pragma solidity ^0.8.28;
 import {IERC1967} from "openzeppelin-contracts/contracts/interfaces/IERC1967.sol";
 
 interface ITransparentUpgradeableBeaconProxy is IERC1967 {
-    function upgradeBeaconToAndCall(address newImplementation, bytes calldata data) external payable;
+    function upgradeBeaconToAndCall(address newBeacon, bytes calldata data) external payable;
 }
